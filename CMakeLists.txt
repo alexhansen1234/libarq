@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+project(arq LANGUAGES C, CXX)
+add_executable(arq src/arc.cpp)
+target_include_directories(arq PUBLIC include)
+target_compile_options(arq PUBLIC -O3 -Wall -std=c++2a)
+add_subdirectory(lib/tuntap)
